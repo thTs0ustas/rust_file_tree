@@ -1,4 +1,5 @@
 pub mod structs;
+use colored::Colorize;
 
 use std::{
     cmp::Ordering,
@@ -97,16 +98,19 @@ pub fn print_tree(root: &str, dir: &Directory) {
                 FileTree::LinkNode(symlink) => {
                     println!(
                         "{}{}{} -> {:?}",
-                        prefix, connector, symlink.name, symlink.target
+                        prefix,
+                        connector,
+                        symlink.name.bright_blue(),
+                        symlink.target
                     );
                     files += 1;
                 }
                 FileTree::FileNode(file) => {
-                    println!("{}{}{}", prefix, connector, file.name);
+                    println!("{}{}{}", prefix, connector, file.name.purple());
                     files += 1;
                 }
                 FileTree::DirNode(directory) => {
-                    println!("{}{}{}", prefix, connector, directory.name);
+                    println!("{}{}{}", prefix, connector, directory.name.yellow());
                     let new_connector = format!(
                         "{}{}",
                         prefix,
