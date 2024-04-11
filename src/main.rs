@@ -1,11 +1,18 @@
+use clap::Parser;
+use file_tree::{dir_walk, print_tree};
 use std::path::PathBuf;
 
-use file_tree::dir_walk;
+#[derive(Parser, Debug)]
+struct Args {
+    #[clap(short, long, default_value = ".")]
+    path: String,
+}
 
 fn main() {
-    let root = PathBuf::from("src");
+    let args = Args::parse();
+    let root = PathBuf::from(args.path);
 
     let tree = dir_walk(&root).unwrap();
 
-    println!("{:#?}", tree);
+    print_tree(root.to_str().unwrap(), &tree);
 }

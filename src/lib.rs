@@ -70,3 +70,58 @@ pub fn dir_walk(root: &PathBuf) -> Result<Directory> {
         entries: directory,
     })
 }
+
+pub fn print_tree(root: &str, dir: &Directory) {
+    const OTHER_CHILD: &str = "│   "; // prefix: pipe
+    const OTHER_ENTRY: &str = "├── "; // connector: tee
+    const FINAL_CHILD: &str = "    "; // prefix: no more siblings
+    const FINAL_ENTRY: &str = "└── "; // connector: elbow
+
+    println!("{}", root);
+    let (d, f) = visit(dir, "");
+    println!("\n{} directories, {} files", d, f);
+
+    fn visit(node: &Directory, prefix: &str) -> (usize, usize) {
+        let mut dirs = 1;
+        let mut files = 0;
+        let mut entries = node.entries.len();
+
+        for entry in &node.entries {
+            entries -= 1;
+            let connector = if entries == 0 {
+                FINAL_ENTRY
+            } else {
+                OTHER_ENTRY
+            };
+            match entry {
+                FileTree::LinkNode(symlink) => {
+                    println!(
+                        "{}{}{} -> {:?}",
+                        prefix, connector, symlink.name, symlink.target
+                    );
+                    files += 1;
+                }
+                FileTree::FileNode(file) => {
+                    println!("{}{}{}", prefix, connector, file.name);
+                    files += 1;
+                }
+                FileTree::DirNode(directory) => {
+                    println!("{}{}{}", prefix, connector, directory.name);
+                    let new_connector = format!(
+                        "{}{}",
+                        prefix,
+                        if entries == 0 {
+                            FINAL_CHILD
+                        } else {
+                            OTHER_CHILD
+                        },
+                    );
+                    let (sub_dirs, sub_files) = visit(directory, &new_connector);
+                    dirs += sub_dirs;
+                    files += sub_files;
+                }
+            }
+        }
+        (dirs, files)
+    }
+}
