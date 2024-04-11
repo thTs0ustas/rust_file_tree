@@ -1,0 +1,240 @@
+Directory {
+    name: "src",
+    entries: [
+        FileNode(
+            File {
+                name: "lib.rs",
+                metadata: Metadata {
+                    file_type: FileType(
+                        FileType {
+                            mode: 33188,
+                        },
+                    ),
+                    is_dir: false,
+                    is_file: true,
+                    permissions: Permissions(
+                        FilePermissions {
+                            mode: 33188,
+                        },
+                    ),
+                    modified: Ok(
+                        SystemTime {
+                            tv_sec: 1712824721,
+                            tv_nsec: 830510074,
+                        },
+                    ),
+                    accessed: Ok(
+                        SystemTime {
+                            tv_sec: 1712824156,
+                            tv_nsec: 992751297,
+                        },
+                    ),
+                    created: Ok(
+                        SystemTime {
+                            tv_sec: 1712824156,
+                            tv_nsec: 992751297,
+                        },
+                    ),
+                    ..
+                },
+            },
+        ),
+        FileNode(
+            File {
+                name: "main.rs",
+                metadata: Metadata {
+                    file_type: FileType(
+                        FileType {
+                            mode: 33188,
+                        },
+                    ),
+                    is_dir: false,
+                    is_file: true,
+                    permissions: Permissions(
+                        FilePermissions {
+                            mode: 33188,
+                        },
+                    ),
+                    modified: Ok(
+                        SystemTime {
+                            tv_sec: 1712824892,
+                            tv_nsec: 973839565,
+                        },
+                    ),
+                    accessed: Ok(
+                        SystemTime {
+                            tv_sec: 1712824729,
+                            tv_nsec: 350480236,
+                        },
+                    ),
+                    created: Ok(
+                        SystemTime {
+                            tv_sec: 1712824729,
+                            tv_nsec: 350480236,
+                        },
+                    ),
+                    ..
+                },
+            },
+        ),
+        DirNode(
+            Directory {
+                name: "structs",
+                entries: [
+                    FileNode(
+                        File {
+                            name: "directory.rs",
+                            metadata: Metadata {
+                                file_type: FileType(
+                                    FileType {
+                                        mode: 33188,
+                                    },
+                                ),
+                                is_dir: false,
+                                is_file: true,
+                                permissions: Permissions(
+                                    FilePermissions {
+                                        mode: 33188,
+                                    },
+                                ),
+                                modified: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712824434,
+                                        tv_nsec: 363650725,
+                                    },
+                                ),
+                                accessed: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712823932,
+                                        tv_nsec: 641641491,
+                                    },
+                                ),
+                                created: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712823932,
+                                        tv_nsec: 641641491,
+                                    },
+                                ),
+                                ..
+                            },
+                        },
+                    ),
+                    FileNode(
+                        File {
+                            name: "file.rs",
+                            metadata: Metadata {
+                                file_type: FileType(
+                                    FileType {
+                                        mode: 33188,
+                                    },
+                                ),
+                                is_dir: false,
+                                is_file: true,
+                                permissions: Permissions(
+                                    FilePermissions {
+                                        mode: 33188,
+                                    },
+                                ),
+                                modified: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712761944,
+                                        tv_nsec: 587876646,
+                                    },
+                                ),
+                                accessed: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712761729,
+                                        tv_nsec: 936669163,
+                                    },
+                                ),
+                                created: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712761729,
+                                        tv_nsec: 936669163,
+                                    },
+                                ),
+                                ..
+                            },
+                        },
+                    ),
+                    FileNode(
+                        File {
+                            name: "mod.rs",
+                            metadata: Metadata {
+                                file_type: FileType(
+                                    FileType {
+                                        mode: 33188,
+                                    },
+                                ),
+                                is_dir: false,
+                                is_file: true,
+                                permissions: Permissions(
+                                    FilePermissions {
+                                        mode: 33188,
+                                    },
+                                ),
+                                modified: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712824223,
+                                        tv_nsec: 856485990,
+                                    },
+                                ),
+                                accessed: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712824071,
+                                        tv_nsec: 397090929,
+                                    },
+                                ),
+                                created: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712824071,
+                                        tv_nsec: 397090929,
+                                    },
+                                ),
+                                ..
+                            },
+                        },
+                    ),
+                    FileNode(
+                        File {
+                            name: "symlink.rs",
+                            metadata: Metadata {
+                                file_type: FileType(
+                                    FileType {
+                                        mode: 33188,
+                                    },
+                                ),
+                                is_dir: false,
+                                is_file: true,
+                                permissions: Permissions(
+                                    FilePermissions {
+                                        mode: 33188,
+                                    },
+                                ),
+                                modified: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712762033,
+                                        tv_nsec: 131549732,
+                                    },
+                                ),
+                                accessed: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712761971,
+                                        tv_nsec: 151778568,
+                                    },
+                                ),
+                                created: Ok(
+                                    SystemTime {
+                                        tv_sec: 1712761971,
+                                        tv_nsec: 151778568,
+                                    },
+                                ),
+                                ..
+                            },
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+}
